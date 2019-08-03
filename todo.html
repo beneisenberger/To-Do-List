@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+
+    <style>
+    
+    #main {
+        width: 800px;
+        height: 100%;
+        margin-left: calc(50vw - 400px);
+        background-color: gray;
+    }
+    
+    .taskBox {
+        width: 600px;
+        height: 300px;
+        background-color: white;
+        margin: 10px;
+        border: 2px solid black;
+        margin-left: calc(50% - 300px);
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .small-button {
+        height: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .delete {
+        float: right;
+        margin-right: 40px;
+    }
+
+    ul {
+        list-style: none;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <main id="main">
+
+        <h1 class="title">Ben's To-Do List</h1>
+
+        <div id="userEnter" class="title">
+            <form id="userSubmit">
+                <label for="task">Name of Task: </label>
+                <input type="text" id="task" name="task" placeholder="task name">
+                <label for="dueDate">Due Date: </label>
+                <input type="text" id="dueDate" name="dueDate" placeholder="mm/dd/yyyy">
+                <button id="addButton">Add Task</button>
+            </form>
+        </div>
+
+        <h2 class="title">Incompleted Tasks</h2>
+
+        <div id="incomplete" class="taskBox">
+            <ul id="incompleteList"></ul>
+        </div>
+
+        <h2 class="title">Completed Tasks</h2>
+
+        <div id="complete" class="taskBox">
+            <ul id="completeList"></ul>
+        </div>
+
+    </main>
+
+    <script src="todo.js"></script>
+</body>
+</html>
